@@ -1,0 +1,18 @@
+[
+  {
+    "bankName": "Example Bank",
+    "issuanceFee": "Rs. 500",
+    "annualFee": "Nil",
+    "loadingFee": "Rs. 500",
+    "minimumLoad": "Nil",
+    "maximumLoadPerYear": "$500",
+    "transactionFee": "Nil",
+    "usdEarner": "No",
+    "validityYears": 5,
+    "knownIssues": "Example Issue, Example Issue",
+    "features": "Online Load, Examle Feature",
+    "totalTimeOfIssuance": "15 Days",
+    "remarks": "",
+    "lastUpdated": "2024-01-26"
+  },
+]
