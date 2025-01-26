@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepal Dollar Card Comparison</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        table {
+            width: 90%;
+            margin: 2rem auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem 0;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nepal Dollar Card Comparison</h1>
+    </header>
+
+    <table id="bankTable">
+        <thead>
+            <tr>
+                <th>Bank Name</th>
+                <th>Issuance Fee</th>
+                <th>Annual Fee</th>
+                <th>Loading Fee</th>
+                <th>Minimum Load</th>
+                <th>Maximum Load/Year</th>
+                <th>Transaction Fee</th>
+                <th>USD Earner</th>
+                <th>Validity (Years)</th>
+                <th>Known Issues</th>
+                <th>Features</th>
+                <th>Total Time of Issuance</th>
+                <th>Remarks</th>
+                <th>Last Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be populated here dynamically -->
+        </tbody>
+    </table>
+
+    <footer>
+        <p>© 2025 Nepal Dollar Card Comparison</p>
+    </footer>
+
+    <script>
+        // Fetch and display the JSON data in the table
+        async function loadTableData() {
+            const response = await fetch('https://raw.githubusercontent.com/gauravyad69/NepalDollarCardComparison/refs/heads/main/cards.json'); // Ensure this path is correct
+            const data = await response.json();
+
+            const tableBody = document.querySelector('#bankTable tbody');
+            tableBody.innerHTML = '';
+
+            data.forEach(card => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${card.bankName}</td>
+                    <td>${card.issuanceFee}</td>
+                    <td>${card.annualFee}</td>
+                    <td>${card.loadingFee}</td>
+                    <td>${card.minimumLoad}</td>
+                    <td>${card.maximumLoadPerYear}</td>
+                    <td>${card.transactionFee}</td>
+                    <td>${card.usdEarner}</td>
+                    <td>${card.validityYears}</td>
+                    <td>${card.knownIssues}</td>
+                    <td>${card.features}</td>
+                    <td>${card.totalTimeOfIssuance}</td>
+                    <td>${card.remarks}</td>
+                    <td>${card.lastUpdated}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        loadTableData();
+    </script>
+</body>
+</html>
