@@ -2,7 +2,6 @@
 
 This repository contains a comprehensive comparison of dollar card services provided by various banks in Nepal. The data includes details on issuance fees, annual fees, loading fees, transaction fees, and more. This README provides an overview of the dataset and guidelines for contributing.
 
-[The Actual Comparison Can Be Found Here](https://github.com/gauravyad69/NepalDollarCardComparison/blob/main/CARDS.md)
 
 ## Overview
 
@@ -19,21 +18,16 @@ The dataset provides the following details for each bank:
 - **Validity (Years)**: Card validity period.
 - **Remarks**: Additional features or conditions.
 
-## Example Data Format, [The Actual Comparison Can Be Found Here](https://github.com/gauravyad69/NepalDollarCardComparison/blob/main/CARDS.md)
 
-The data is structured as follows:
-
-| **Bank Name**           | **Issuance Fee**                 | **Annual Fee** | **Loading Fee** | **Minimum Load** | **Maximum Load/Year** | **Transaction Fee**                        | **USD Earner**            | **Validity (Years)** | **Remarks**                                              |
-|--------------------------|-----------------------------------|----------------|-----------------|------------------|-----------------------|--------------------------------------------|---------------------------|-----------------------|-----------------------------------------------------------|
-| Kumari Bank             | Rs. 500                          | Nil            | Rs. 500         | Nil              | $500                 | Nil                                        | No                        | 5                     |                                                       |
-| Nabil Bank              | Rs. 1000 (1st load free)         | Nil            | Rs. 500         | Nil              | $500                 | 1% cross-border + 0.5% or $0.50, whichever is higher | Yes                       | 4                     | Easy load on request at nearest branch                  |
-| Everest Bank            | $5 (Virtual) / $10 (Physical)    | Nil            | Nil             | Nil              | $500                 | Same as Nabil                              | No                        | 4                     |                                                       |
 
 ## Features
 
 - **Ranking of Banks**: Highlighted top performers based on customer convenience and fee structures.
 - **"Winners" Section**: Banks offering the best overall experience despite high fees.
 - Data easily extendable for new banks or updated fee structures.
+
+
+##  [The Actual Comparison Can Be Found Here](https://github.com/gauravyad69/NepalDollarCardComparison/blob/main/CARDS.md)
 
 ## How to Use
 
@@ -46,12 +40,33 @@ The data is structured as follows:
 
 ## Contribution Guidelines
 
+##Example Data Set
+```[
+  {
+    "bankName": "Example Bank",
+    "issuanceFee": "Rs. 500",
+    "annualFee": "Nil",
+    "loadingFee": "Rs. 500",
+    "minimumLoad": "Nil",
+    "maximumLoadPerYear": "$500",
+    "transactionFee": "Nil",
+    "usdEarner": "No",
+    "validityYears": 5,
+    "knownIssues": "Example Issue, Example Issue",
+    "features": "Online Load, Examle Feature",
+    "totalTimeOfIssuance": "15 Days",
+    "remarks": "",
+    "lastUpdated": "2024-01-26"
+  },
+]
+```
+
 We welcome contributions to improve and update this dataset. Please follow the steps below:
 
 1. **Fork the Repository**: Click the "Fork" button on the top-right corner of this page.
 2. **Update the Dataset**:
-   - Add new banks or update existing data.
-   - Ensure the data adheres to the format described in the "Example Data Format" section.
+   - Add new banks or update existing data at [cards.json](https://github.com/gauravyad69/NepalDollarCardComparison/blob/main/cards.json), The update of the table is automated so you don't have to worry about that.
+   - Ensure the data adheres to the format described in the "Example Data Set" section.
 3. **Create a Pull Request**: Submit your changes for review.
 
 ### Requirements for Contributions
@@ -62,7 +77,7 @@ We welcome contributions to improve and update this dataset. Please follow the s
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the GNU License. See the [LICENSE](LICENSE) file for more details.
 
 ## Contact
 
@@ -72,5 +87,5 @@ For any inquiries or feedback, please open an issue or contact the repository ma
 
 ### Notes for Scalability
 
-- Future updates to the dataset can be automated using a structured CSV or JSON file.
-- The table structure allows for easy addition or removal of columns as new features are introduced.
+- ~~Future updates to the dataset can be automated using a structured CSV or JSON file.~~, Done
+- The json structure allows for easy addition or removal of data as new features are introduced.
