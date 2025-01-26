@@ -19,7 +19,7 @@ The dataset provides the following details for each bank:
 - **Validity (Years)**: Card validity period.
 - **Remarks**: Additional features or conditions.
 
-## Example Data Format
+## Example Data Format, [The Actual Comparison Can Be Found Here](https://github.com/gauravyad69/NepalDollarCardComparison/blob/main/CARDS.md)
 
 The data is structured as follows:
 
