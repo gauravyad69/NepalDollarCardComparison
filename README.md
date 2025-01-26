@@ -2,6 +2,8 @@
 
 This repository contains a comprehensive comparison of dollar card services provided by various banks in Nepal. The data includes details on issuance fees, annual fees, loading fees, transaction fees, and more. This README provides an overview of the dataset and guidelines for contributing.
 
+[The Actual Comparison Can Be Found Here](https://github.com/gauravyad69/NepalDollarCardComparison/blob/main/CARDS.md)
+
 ## Overview
 
 The dataset provides the following details for each bank:
@@ -72,5 +74,3 @@ For any inquiries or feedback, please open an issue or contact the repository ma
 
 - Future updates to the dataset can be automated using a structured CSV or JSON file.
 - The table structure allows for easy addition or removal of columns as new features are introduced.
-- Consider integrating a visualization tool for fee comparison in future iterations.
-
